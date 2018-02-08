@@ -1,6 +1,6 @@
 import Vapor
-import QuartzCore
 import Foundation
+import QuartzCore
 /*
 Jean Cabral
 001167363
