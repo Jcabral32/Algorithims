@@ -1,6 +1,7 @@
 // swift-tools-version:4.0
 
 import PackageDescription
+import QuartzCore
 
 let package = Package(
     name: "TestServer",
