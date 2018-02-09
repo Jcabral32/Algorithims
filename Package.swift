@@ -1,7 +1,7 @@
 // swift-tools-version:4.0
 
 import PackageDescription
-import QuartzCore
+
 
 let package = Package(
     name: "TestServer",
@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .target(
             name: "App",
-            dependencies: ["Vapor", "FluentProvider"],
+            dependencies: ["Vapor", "FluentProvider","QuartzCore"],
             exclude: ["Config", "Public", "Resources"]
         ),
         .target(name: "Run", dependencies: ["App"]),
