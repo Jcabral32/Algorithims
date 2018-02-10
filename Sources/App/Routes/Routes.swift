@@ -35,9 +35,9 @@ extension Droplet {
             
             
            // let timeInterval = executionTimeInterval {
-            let startTime = NSDate()
+            let startTime = Date()
             tempArray.sort()
-            let endTime = NSDate()
+            let endTime = Date()
             let timeInterval = endTime.timeIntervalSince(startTime as Date)
             
             //}
