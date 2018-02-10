@@ -1,11 +1,12 @@
 import Vapor
 import Foundation
-import QuartzCore
+
 /*
 Jean Cabral
 001167363
 */
 
+/*
 func executionTimeInterval(block: () -> ()) -> CFTimeInterval {
     let start = CACurrentMediaTime()
     block();
@@ -13,7 +14,7 @@ func executionTimeInterval(block: () -> ()) -> CFTimeInterval {
     return end - start
 }
 
-
+*/
 
 
 extension Droplet {
@@ -26,14 +27,20 @@ extension Droplet {
                 return errorMessage
                 //fatalError("Required parameter was not found. The paramter was\(request.data)")
             }
-            
+            //Array to hold JSON converted Ints
             var tempArray = [Int]()
             for numbers in array.indices {
                 tempArray.append(array[numbers].int!)
             }
-            let timeInterval = executionTimeInterval {
+            
+            
+           // let timeInterval = executionTimeInterval {
+            let startTime = NSDate()
             tempArray.sort()
-            }
+            let endTime = NSDate()
+            let timeInterval = endTime.timeIntervalSince(startTime as Date)
+            
+            //}
             var milliseconds = (timeInterval.doubleValue / 1000)
             milliseconds.round(FloatingPointRoundingRule.up)
             
